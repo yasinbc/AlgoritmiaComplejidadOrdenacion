@@ -6,6 +6,7 @@ import (
 )
 
 func TiempoEjecucion(nombre string, ordenacion []int) {
+	fmt.Println("")
 	fmt.Println("-------------------------------")
 	startTime := time.Now()
 	fmt.Println(nombre + ": ")
@@ -14,4 +15,5 @@ func TiempoEjecucion(nombre string, ordenacion []int) {
 	fmt.Println("Tiempo al empezar: ", startTime)
 	fmt.Println("Tiempo al terminar: ", endTime)
 	fmt.Println("-------------------------------")
+	fmt.Println("")
 }
