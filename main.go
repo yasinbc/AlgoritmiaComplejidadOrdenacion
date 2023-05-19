@@ -13,4 +13,5 @@ func main() {
 	ordenacion.TiempoEjecucion("Selección", ordenacion.Seleccion(array3))
 	ordenacion.TiempoEjecucion("Merge Sort", ordenacion.MergeSort(array3))
 	ordenacion.TiempoEjecucion("Insercion", ordenacion.Insercion(array3))
+	ordenacion.TiempoEjecucion("QuickSort", ordenacion.QuickSort(array3))
 }
