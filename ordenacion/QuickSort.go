@@ -9,23 +9,23 @@ func QuickSort(array []int) []int {
 		return array
 	}
 
-	left, right := 0, len(array)-1
+	izquierda, derecha := 0, len(array)-1
 
-	pivot := rand.Int() % len(array)
+	pivote := rand.Int() % len(array)
 
-	array[pivot], array[right] = array[right], array[pivot]
+	array[pivote], array[derecha] = array[derecha], array[pivote]
 
 	for i, _ := range array {
-		if array[i] < array[right] {
-			array[left], array[i] = array[i], array[left]
-			left++
+		if array[i] < array[derecha] {
+			array[izquierda], array[i] = array[i], array[izquierda]
+			izquierda++
 		}
 	}
 
-	array[left], array[right] = array[right], array[left]
+	array[izquierda], array[derecha] = array[derecha], array[izquierda]
 
-	QuickSort(array[:left])
-	QuickSort(array[left+1:])
+	QuickSort(array[:izquierda])
+	QuickSort(array[izquierda+1:])
 
 	return array
 }

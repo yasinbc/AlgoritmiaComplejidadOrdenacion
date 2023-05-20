@@ -12,7 +12,7 @@ func main() {
 	//time.Sleep(time.Second * 2)
 
 	//longitud del array
-	var size int = 10000
+	var size int = 100000
 	array := ordenacion.RanNumArr(size)
 
 	//fmt.Println("Algoritmo de Ordenacion por Seleccion: ")
