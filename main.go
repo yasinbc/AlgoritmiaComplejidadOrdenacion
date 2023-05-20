@@ -12,7 +12,7 @@ func main() {
 	//time.Sleep(time.Second * 2)
 
 	//longitud del array
-	var size int = 100000
+	var size int = 100
 	array := ordenacion.RanNumArr(size)
 
 	fmt.Println("\n\n\n\nArray de ", size, " elementos a ordenar.\n")
