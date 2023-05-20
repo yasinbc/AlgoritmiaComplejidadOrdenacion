@@ -1,7 +1,5 @@
 package ordenacion
 
-import "fmt"
-
 func Insercion(array []int) []int {
 	// Contador de pasos
 	stepCounter := 1
@@ -13,13 +11,13 @@ func Insercion(array []int) []int {
 			continue
 		}
 
-		//Recorre cada index hasta encontrar el valor nero al actual
+		//Recorre cada index hasta encontrar el valor neto al actual
 		for j := i - 1; j >= 0; j-- {
-			fmt.Printf("%v > %v = %v\n", array[j], v, array[j] > v)
+			//fmt.Printf("%v > %v = %v\n", array[j], v, array[j] > v)
 			stepCounter++
 
 			if array[j] <= v {
-				fmt.Printf("%v\n", array)
+				//fmt.Printf("%v\n", array)
 				break
 			}
 
@@ -27,7 +25,7 @@ func Insercion(array []int) []int {
 			array[j] = v
 			i--
 
-			fmt.Printf("%v\n", array)
+			//fmt.Printf("%v\n", array)
 		}
 	}
 	return array

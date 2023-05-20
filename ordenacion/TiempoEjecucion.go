@@ -5,15 +5,15 @@ import (
 	"time"
 )
 
-func TiempoEjecucion(nombre string, ordenacion []int) {
+func TiempoEjecucion(nombre string) func() {
 	fmt.Println("")
 	fmt.Println("-------------------------------")
-	fmt.Println(nombre + ": ")
+
 	startTime := time.Now()
-	fmt.Println(ordenacion)
-	endTime := time.Now()
-	fmt.Println("Tiempo al empezar: ", startTime)
-	fmt.Println("Tiempo al terminar: ", endTime)
-	fmt.Println("-------------------------------")
-	fmt.Println("")
+	return func() {
+
+		fmt.Println("s% Tardó %v\n", nombre, time.Since(startTime))
+	}
+	//fmt.Println("-------------------------------")
+	//fmt.Println("")
 }
