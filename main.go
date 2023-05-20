@@ -27,6 +27,8 @@ func main() {
 	//fmt.Println("Tiempo de ejecucion: ", time.Since(startTime3))
 	//fmt.Println("\n")
 
+	tiempoPrograma := time.Now()
+
 	fmt.Println("\n\n\nAlgoritmo de Ordenacion Burbuja: ")
 	startTime1 := time.Now()
 	ordenacion.Burbuja(array)
@@ -58,6 +60,7 @@ func main() {
 	fmt.Println("Tiempo de ejecucion: ", time.Since(startTime5))
 	fmt.Println("\n")
 
+	fmt.Println("\n\n\n\nTiempo de ejecucion de todo el programa: ", time.Since(tiempoPrograma))
 	//ordenacion.TiempoEjecucion("Burbuja", ordenacion.Burbuja(array3))
 	//ordenacion.TiempoEjecucion("Selección", ordenacion.Seleccion(array3))
 	//ordenacion.TiempoEjecucion("Merge Sort", ordenacion.MergeSort(array3))
