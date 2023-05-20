@@ -1,14 +1,15 @@
 package ordenacion
 
 func MergeSort(array []int) []int {
-	if len(array) <= 1 {
+	if len(array) < 2 {
 		return array
 	}
 
-	mitad := len(array) / 2
-	izquierda := MergeSort(array[:mitad])
-	derecha := MergeSort(array[mitad:])
-	return Merge(izquierda, derecha)
+	mitad := (len(array)) / 2
+	//izquierda := MergeSort(array[:mitad])
+	//derecha := MergeSort(array[mitad:])
+	//return Merge(izquierda, derecha)
+	return Merge(MergeSort(array[:mitad]), MergeSort(array[mitad:]))
 
 }
 
