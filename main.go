@@ -93,7 +93,7 @@ func main() {
 	fmt.Println("\n", array, "\n")
 
 	array = nil
-	
+
 	fmt.Println("\n", array, "\n")
 	fmt.Println("Tiempo de ejecucion de todo el programa: ")
 	fmt.Println("	Segundos:      ", time.Since(tiempoPrograma).Seconds())
