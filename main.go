@@ -15,18 +15,6 @@ func main() {
 	var size int = 100000
 	array := ordenacion.RanNumArr(size)
 
-	//fmt.Println("Algoritmo de Ordenacion por Seleccion: ")
-	//startTime2 := time.Now()
-	//ordenacion.Seleccion(array)
-	//fmt.Println("Tiempo de ejecucion: ", time.Since(startTime2))
-	//fmt.Println("\n")
-	//
-	//fmt.Println("Algoritmo de Ordenacion por Insercion: ")
-	//startTime3 := time.Now()
-	//ordenacion.Insercion(array)
-	//fmt.Println("Tiempo de ejecucion: ", time.Since(startTime3))
-	//fmt.Println("\n")
-
 	tiempoPrograma := time.Now()
 
 	fmt.Println("\n\n\nAlgoritmo de Ordenacion Burbuja: ")
@@ -61,10 +49,5 @@ func main() {
 	fmt.Println("\n")
 
 	fmt.Println("\n\n\n\nTiempo de ejecucion de todo el programa: ", time.Since(tiempoPrograma))
-	//ordenacion.TiempoEjecucion("Burbuja", ordenacion.Burbuja(array3))
-	//ordenacion.TiempoEjecucion("Selección", ordenacion.Seleccion(array3))
-	//ordenacion.TiempoEjecucion("Merge Sort", ordenacion.MergeSort(array3))
-	//ordenacion.TiempoEjecucion("Insercion", ordenacion.Insercion(array3))
-	//ordenacion.TiempoEjecucion("QuickSort", ordenacion.QuickSort(array3))
 
 }
