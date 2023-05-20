@@ -7,11 +7,7 @@ import (
 )
 
 func main() {
-
-	//defer ordenacion.TiempoEjecucion("Burbuja")()
-	//time.Sleep(time.Second * 2)
-
-	//longitud del array
+	
 	var size int = 100
 	array := ordenacion.RanNumArr(size)
 
