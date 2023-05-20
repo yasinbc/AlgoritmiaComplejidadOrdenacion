@@ -7,25 +7,49 @@ import (
 )
 
 func main() {
-	//array1 := []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 12}
-	//array2 := []int{-356, 328, 705, -199, -373, 108, -377, -362, 128, 98, 1, -9, -500, -607, 387, 12, 210, -600, -351, 432}
-	//array3 := []int{2, 56843, -76716, -42042, 30846, 50290, -27458, 47259, 91477, 6775, 59768, 15476, -21788, -33386, 42947, -27244, -45848, -7689, 14298, -41118, -99082, -3641, -27944, -59233, 25235, -44990, 56287, -13288, 8899, 2579, -28954, 27772, 41360, 34462, 8174, 53027, -22394, -91773, -42887, 14202, 30264, 42811, -43774, -3273, 11149, 27266, -32695, 31350, -5934, 30010, -32840}
-
 	//longitud del array
 	var size int = 1000
 	array := ordenacion.RanNumArr(size)
 
-	//startTime := time.Now()
-	//ordenacion.Burbuja(array3)
-	//endTime := time.Now()
-	//fmt.Println("Tiempo al empezar: ", startTime)
-	//fmt.Println("Tiempo al terminar: ", endTime)
-
-	startTime := time.Now()
+	fmt.Println("Algoritmo de Ordenacion Burbuja: \n")
+	startTime1 := time.Now()
 	ordenacion.Burbuja(array)
-	endTime := time.Now()
-	fmt.Println("Tiempo al empezar: ", startTime)
-	fmt.Println("Tiempo al terminar: ", endTime)
+	endTime1 := time.Now()
+	fmt.Println("Tiempo al iniciar: ", startTime1)
+	fmt.Println("Tiempo al terminar: ", endTime1)
+	fmt.Println("\n")
+
+	fmt.Println("Algoritmo de Ordenacion por Seleccion: \n")
+	startTime2 := time.Now()
+	ordenacion.Seleccion(array)
+	endTime2 := time.Now()
+	fmt.Println("Tiempo al iniciar: ", startTime2)
+	fmt.Println("Tiempo al terminar: ", endTime2)
+	fmt.Println("\n")
+
+	fmt.Println("Algoritmo de Ordenacion por Insercion: \n")
+	startTime3 := time.Now()
+	ordenacion.Insercion(array)
+	endTime3 := time.Now()
+	fmt.Println("Tiempo al iniciar: ", startTime3)
+	fmt.Println("Tiempo al terminar: ", endTime3)
+	fmt.Println("\n")
+
+	fmt.Println("Algoritmo de Ordenacion Merge Sort: \n")
+	startTime4 := time.Now()
+	ordenacion.MergeSort(array)
+	endTime4 := time.Now()
+	fmt.Println("Tiempo al iniciar: ", startTime4)
+	fmt.Println("Tiempo al terminar: ", endTime4)
+	fmt.Println("\n")
+
+	fmt.Println("Algoritmo de Ordenacion Quick Sort: \n")
+	startTime5 := time.Now()
+	ordenacion.QuickSort(array)
+	endTime5 := time.Now()
+	fmt.Println("Tiempo al iniciar: ", startTime5)
+	fmt.Println("Tiempo al terminar: ", endTime5)
+	fmt.Println("\n")
 
 	//ordenacion.TiempoOrdenacion(ordenacion.Burbuja(array3))
 
