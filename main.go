@@ -7,18 +7,7 @@ import (
 )
 
 func main() {
-
-	/*var size int = 10
-	array := ordenacion.RanNumArr(size)
-	fmt.Println(array)
-	fmt.Println("\n")
-	fmt.Print(ordenacion.Burbuja(array))
-	fmt.Println("Limpiar array\n")
-	array = nil
-	fmt.Println(array)
-	array = ordenacion.RanNumArr(size)
-	fmt.Println(array)*/
-
+	//Incluye visualizacion de las matrices
 	var size int = 10
 	array := ordenacion.RanNumArr(size)
 
@@ -70,7 +59,7 @@ func main() {
 	fmt.Println("\n", array, "\n")
 	fmt.Println("	- Algoritmo de Ordenacion Merge Sort: ")
 	startTime4 := time.Now()
-	ordenacion.MergeSort(array)
+	ordenacion.MergeSort(array, 0, len(array)-1)
 	fmt.Println("		Tiempo de ejecucion: ")
 	fmt.Println("			Segundos:      ", time.Since(startTime4).Seconds())
 	fmt.Println("			Milisegundos:  ", time.Since(startTime4).Milliseconds())
@@ -92,12 +81,11 @@ func main() {
 	fmt.Println("			Nanosegundos:  ", time.Since(startTime5).Nanoseconds(), "\n")
 	fmt.Println("\n", array, "\n")
 
-	array = nil
-
 	fmt.Println("\n", array, "\n")
 	fmt.Println("Tiempo de ejecucion de todo el programa: ")
 	fmt.Println("	Segundos:      ", time.Since(tiempoPrograma).Seconds())
 	fmt.Println("	Milisegundos:  ", time.Since(tiempoPrograma).Milliseconds())
 	fmt.Println("	Microsegundos: ", time.Since(tiempoPrograma).Microseconds())
 	fmt.Println("	Nanosegundos:  ", time.Since(tiempoPrograma).Nanoseconds(), "\n")
+
 }
