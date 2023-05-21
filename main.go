@@ -8,13 +8,13 @@ import (
 
 func main() {
 	//Incluye visualizacion de las matrices
-	var size int = 100000
+	var size int = 1000000
 	array := ordenacion.RanNumArr(size)
 
 	fmt.Println("\n\n\n\nArray de ", size, " elementos a ordenar.\n")
 	tiempoPrograma := time.Now()
 
-	//fmt.Println(array, "\n")
+	fmt.Println(array, "\n")
 	fmt.Println("	- Algoritmo de Ordenacion Burbuja: ")
 	startTime1 := time.Now()
 	ordenacion.Burbuja(array)

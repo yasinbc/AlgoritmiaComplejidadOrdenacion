@@ -1,47 +1,45 @@
 package ordenacion
 
-func Sort(array []int) []int {
-	if len(array) <= 1 {
-		return array
+func mergeParts(array []int, leftIndex, divideIndex, rightIndex int) {
+	var tempArray1, tempArray2 []int
+	for i := leftIndex; i <= divideIndex; i++ {
+		tempArray1 = append(tempArray1, array[i])
 	}
-
-	izquierda, derecha := split(array)
-	izquierda = Sort(izquierda)
-	derecha = Sort(derecha)
-	return merge(izquierda, derecha)
-}
-
-// Divide el array en 2
-func split(array []int) ([]int, []int) {
-	return array[0 : len(array)/2], array[len(array)/2:]
-}
-
-// Asume que arrayA y arrayB estan ordenadas
-func merge(arrayA, arrayB []int) []int {
-	arr := make([]int, len(arrayA)+len(arrayB))
-
-	// index j para arrayA, k para arrayB
-	j, k := 0, 0
-
-	for i := 0; i < len(arr); i++ {
-		if j >= len(arrayA) {
-			arr[i] = arrayB[k]
-			k++
-			continue
-		} else if k >= len(arrayB) {
-			arr[i] = arrayA[j]
-			j++
-			continue
-		}
-
-		if arrayA[j] > arrayB[k] {
-			arr[i] = arrayB[k]
-			k++
+	for i := divideIndex + 1; i <= rightIndex; i++ {
+		tempArray2 = append(tempArray2, array[i])
+	}
+	arrayIndex := leftIndex
+	tempArray1Index := 0
+	tempArray2Index := 0
+	for tempArray1Index != len(tempArray1) && tempArray2Index != len(tempArray2) {
+		if tempArray1[tempArray1Index] <= tempArray2[tempArray2Index] {
+			array[arrayIndex] = tempArray1[tempArray1Index]
+			tempArray1Index += 1
 		} else {
-			arr[i] = arrayA[j]
-			j++
+			array[arrayIndex] = tempArray2[tempArray2Index]
+			tempArray2Index += 1
 		}
+		arrayIndex += 1
 	}
+	for tempArray1Index < len(tempArray1) {
+		array[arrayIndex] = tempArray1[tempArray1Index]
+		tempArray1Index += 1
+		arrayIndex += 1
 
-	return arr
+	}
+	for tempArray2Index < len(tempArray2) {
+		array[arrayIndex] = tempArray2[tempArray2Index]
+		tempArray2Index += 1
+		arrayIndex += 1
+	}
+}
+
+func MergeSort(array []int, leftIndex, rightIndex int) {
+	if leftIndex >= rightIndex {
+		return
+	}
+	divideIndex := int((leftIndex + rightIndex) / 2)
+	MergeSort(array, leftIndex, divideIndex)
+	MergeSort(array, divideIndex+1, rightIndex)
+	mergeParts(array, leftIndex, divideIndex, rightIndex)
 }
